@@ -10,6 +10,7 @@
     <modules>
         <module>../shop-common</module>
         <module>../shop-manager</module>
+        <module>../shop-manager-web</module>
     </modules>
     <packaging>pom</packaging>
 

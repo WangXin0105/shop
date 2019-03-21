@@ -1,10 +1,11 @@
 package cn.edu.nun.pojo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class TbContentCategoryExample {
+public class TbContentCategoryExample implements Serializable {
     protected String orderByClause;
 
     protected boolean distinct;

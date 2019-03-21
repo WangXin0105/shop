@@ -1,8 +1,9 @@
 package cn.edu.nun.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TbItem {
+public class TbItem implements Serializable {
     private Long id;
 
     private String title;

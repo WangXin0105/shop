@@ -17,7 +17,6 @@
         <module>shop-manager-pojo</module>
         <module>shop-manager-interface</module>
         <module>shop-manager-service</module>
-        <module>shop-manager-web</module>
     </modules>
 
     <dependencies>
@@ -35,7 +34,7 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <configuration>
                     <path>/</path>
-                    <port>8088</port>
+                    <port>10000</port>
                 </configuration>
             </plugin>
         </plugins>
