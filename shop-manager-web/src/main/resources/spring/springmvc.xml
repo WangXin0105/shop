@@ -11,12 +11,16 @@
 
 	<context:component-scan base-package="cn.edu.nun.controller" />
 	<mvc:annotation-driven />
+
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	<!-- 配置资源映射 -->
+	<mvc:resources location="/css/" mapping="/css/**"/>
+	<mvc:resources location="/js/" mapping="/js/**"/>
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="shop-manager-web"/>
 	<dubbo:registry protocol="zookeeper" address="192.168.5.155:2181"/>
-	<dubbo:reference interface="cn.edu.nun.service.ItemService" id="itemService" />
+	<dubbo:reference interface="cn.edu.nun.service.ItemService" id="itemService"/>
 </beans>
