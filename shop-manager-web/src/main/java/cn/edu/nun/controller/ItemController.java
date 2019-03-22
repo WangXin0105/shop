@@ -1,5 +1,6 @@
 package cn.edu.nun.controller;
 
+import cn.edu.nun.common.pojo.DataModel;
 import cn.edu.nun.pojo.TbItem;
 import cn.edu.nun.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,5 +20,12 @@ public class ItemController {
     public TbItem getItemById(@PathVariable Long itemId) {
         TbItem tbItem = itemService.getItemById(itemId);
         return tbItem;
+    }
+
+    @RequestMapping("/item/list")
+    @ResponseBody
+    public DataModel getItemList(Integer page, Integer rows) {
+        DataModel dataModel = itemService.getItemList(page, rows);
+        return dataModel;
     }
 }
