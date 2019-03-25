@@ -6,18 +6,14 @@
         <artifactId>shop-all</artifactId>
         <groupId>cn.edu.nun</groupId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../shop-all/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>shop-manager-web</artifactId>
+    <artifactId>shop-portal-web</artifactId>
     <packaging>war</packaging>
 
     <dependencies>
-        <dependency>
-            <groupId>cn.edu.nun</groupId>
-            <artifactId>shop-manager-interface</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
         <dependency>
             <groupId>cn.edu.nun</groupId>
             <artifactId>shop-content-interface</artifactId>
@@ -67,10 +63,6 @@
             <artifactId>jsp-api</artifactId>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper</artifactId>
-        </dependency>
         <!-- dubbo相关 -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -98,11 +90,6 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>
-        <!-- 文件上传组件 -->
-        <dependency>
-            <groupId>commons-fileupload</groupId>
-            <artifactId>commons-fileupload</artifactId>
-        </dependency>
     </dependencies>
     <!-- 配置tomcat插件 -->
     <build>
@@ -112,7 +99,7 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <configuration>
                     <path>/</path>
-                    <port>9999</port>
+                    <port>10002</port>
                 </configuration>
             </plugin>
         </plugins>
