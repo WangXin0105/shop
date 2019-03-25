@@ -11,6 +11,8 @@
         <module>../shop-common</module>
         <module>../shop-manager</module>
         <module>../shop-manager-web</module>
+        <module>../shop-portal-web</module>
+        <module>../shop-content</module>
     </modules>
     <packaging>pom</packaging>
 
