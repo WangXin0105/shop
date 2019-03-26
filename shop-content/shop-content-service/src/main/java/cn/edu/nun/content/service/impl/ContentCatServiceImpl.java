@@ -58,4 +58,30 @@ public class ContentCatServiceImpl implements ContentCatService {
         return ResultModel.ok(contentCategory);
     }
 
+    @Override
+    public ResultModel updateContentCategory(long id, String name) {
+        TbContentCategory ContentCategory = contentCategoryMapper.selectByPrimaryKey(id);
+        ContentCategory.setName(name);
+        contentCategoryMapper.updateByPrimaryKeySelective(ContentCategory);
+        return ResultModel.ok();
+    }
+
+    @Override
+    public ResultModel deleteContentCategory(long id) {
+        TbContentCategory contentCategory = contentCategoryMapper.selectByPrimaryKey(id);
+        //递归删除
+        if (contentCategory.getIsParent()){
+            TbContentCategoryExample example = new TbContentCategoryExample();
+            TbContentCategoryExample.Criteria criteria = example.createCriteria();
+            criteria.andParentIdEqualTo(contentCategory.getId());
+            List<TbContentCategory> contentCategories = contentCategoryMapper.selectByExample(example);
+            for (TbContentCategory c : contentCategories) {
+                deleteContentCategory(c.getId());
+            }
+            contentCategoryMapper.deleteByPrimaryKey(id);
+        } else {
+            contentCategoryMapper.deleteByPrimaryKey(id);
+        }
+        return ResultModel.ok();
+    }
 }

@@ -9,5 +9,7 @@ public interface ContentCatService {
 
     List<TreeDataModel> getContentCatList(long parentId);
     ResultModel addContentCategory(long parentId, String name);
+    ResultModel updateContentCategory(long id, String name);
+    ResultModel deleteContentCategory(long id);
 
 }
