@@ -26,16 +26,25 @@ public class ContentCatController {
 		return list;
 	}
 	
-	/**
-	 * 添加分类节点
-	 */
 	@RequestMapping(value="/content/category/create", method=RequestMethod.POST)
 	@ResponseBody
 	public ResultModel createContentCategory(Long parentId, String name) {
-		//调用服务添加节点
-		ResultModel Result = contentCatService.addContentCategory(parentId, name);
-		return Result;
+		ResultModel result = contentCatService.addContentCategory(parentId, name);
+		return result;
 	}
-	
+
+	@RequestMapping(value="/content/category/update", method=RequestMethod.POST)
+	@ResponseBody
+	public ResultModel updateContentCategory(Long id, String name) {
+		ResultModel result = contentCatService.updateContentCategory(id, name);
+		return result;
+	}
+
+	@RequestMapping(value="/content/category/delete", method=RequestMethod.POST)
+	@ResponseBody
+	public ResultModel deleteContentCategory(Long id) {
+		ResultModel result = contentCatService.deleteContentCategory(id);
+		return result;
+	}
 	
 }

@@ -19,8 +19,7 @@ public class ContentController {
 	@RequestMapping(value="/content/save", method=RequestMethod.POST)
 	@ResponseBody
 	public ResultModel addContent(TbContent content) {
-		//调用服务把内容数据保存到数据库
-		ResultModel e3Result = contentService.addContent(content);
-		return e3Result;
+		ResultModel result = contentService.addContent(content);
+		return result;
 	}
 }
