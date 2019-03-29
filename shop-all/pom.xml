@@ -13,6 +13,8 @@
         <module>../shop-manager-web</module>
         <module>../shop-portal-web</module>
         <module>../shop-content</module>
+        <module>../shop-search</module>
+        <module>../shop-search-web</module>
     </modules>
     <packaging>pom</packaging>
 
