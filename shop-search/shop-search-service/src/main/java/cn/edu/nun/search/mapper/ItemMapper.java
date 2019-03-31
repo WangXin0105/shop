@@ -8,4 +8,6 @@ import java.util.List;
 public interface ItemMapper {
 
 	List<SearchModel> getItemList();
+	SearchModel getItemById(long id);
+
 }

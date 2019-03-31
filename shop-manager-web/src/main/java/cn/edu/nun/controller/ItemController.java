@@ -3,19 +3,29 @@ package cn.edu.nun.controller;
 import cn.edu.nun.common.pojo.DataModel;
 import cn.edu.nun.common.utils.ResultModel;
 import cn.edu.nun.pojo.TbItem;
-import cn.edu.nun.pojo.TbItemDesc;
 import cn.edu.nun.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.annotation.Resource;
+import javax.jms.*;
 
 @Controller
 public class ItemController {
 
     @Autowired
     private ItemService itemService;
+
+    @Autowired
+    private JmsTemplate jmsTemplate;
+
+    @Resource
+    private Destination topicDestination;
 
     @RequestMapping("/item/query/{itemId}")
     @ResponseBody
@@ -35,6 +45,15 @@ public class ItemController {
     @ResponseBody
     public ResultModel saveItem(TbItem item, String desc) {
         ResultModel result = itemService.addItem(item, desc);
+        Long itemId = (Long) result.getData();
+        jmsTemplate.send(topicDestination, new MessageCreator() {
+
+            @Override
+            public Message createMessage(Session session) throws JMSException {
+                TextMessage textMessage = session.createTextMessage(itemId + "");
+                return textMessage;
+            }
+        });
         return result;
     }
 
