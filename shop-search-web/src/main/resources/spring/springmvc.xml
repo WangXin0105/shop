@@ -19,6 +19,9 @@
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+
+	<bean class="cn.edu.nun.search.exception.GlobalExceptionResolver"/>
+
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="shop-search-web"/>
 	<dubbo:registry protocol="zookeeper" address="192.168.5.155:2181"/>
