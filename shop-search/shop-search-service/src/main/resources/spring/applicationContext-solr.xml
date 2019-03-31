@@ -8,8 +8,14 @@
 	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 
-	<bean id="httpSolrServer" class="org.apache.solr.client.solrj.impl.HttpSolrServer">
-		<constructor-arg index="0" value="http://192.168.5.155:8088/solr/collection1"/>
+	<!-- 单机版solrJ -->
+	 <bean id="httpSolrServer" class="org.apache.solr.client.solrj.impl.HttpSolrServer">
+		<constructor-arg index="0" value="http://192.168.25.163:8080/solr/collection1"/>
 	</bean>
+	<!-- 集群版solrJ -->
+	<!--<bean id="cloudSolrServer" class="org.apache.solr.client.solrj.impl.CloudSolrServer">
+		<constructor-arg index="0" value="192.168.5.155:2281,192.168.5.155:2381,192.168.5.155:2481"></constructor-arg>
+		<property name="defaultCollection" value="collection2"></property>
+	</bean>-->
 	
 </beans>
