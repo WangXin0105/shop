@@ -59,7 +59,7 @@ public class ItemServiceImpl implements ItemService {
         itemDesc.setCreated(date);
         itemDesc.setUpdated(date);
         itemDescMapper.insert(itemDesc);
-        return ResultModel.ok();
+        return ResultModel.ok(id);
     }
 
     @Override
