@@ -15,6 +15,7 @@
         <module>../shop-content</module>
         <module>../shop-search</module>
         <module>../shop-search-web</module>
+        <module>../shop-item-web</module>
     </modules>
     <packaging>pom</packaging>
 

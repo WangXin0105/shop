@@ -3,6 +3,7 @@ package cn.edu.nun.controller;
 import cn.edu.nun.common.pojo.DataModel;
 import cn.edu.nun.common.utils.ResultModel;
 import cn.edu.nun.pojo.TbItem;
+import cn.edu.nun.pojo.TbItemDesc;
 import cn.edu.nun.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
@@ -29,8 +30,8 @@ public class ItemController {
 
     @RequestMapping("/item/query/{itemId}")
     @ResponseBody
-    public ResultModel getItemById(@PathVariable Long itemId) {
-        ResultModel result = itemService.getItemById(itemId);
+    public TbItem getItemById(@PathVariable Long itemId) {
+        TbItem result = itemService.getItemById(itemId);
         return result;
     }
 
@@ -59,8 +60,8 @@ public class ItemController {
 
     @RequestMapping("/item/desc/{itemId}")
     @ResponseBody
-    public ResultModel getItemDescById(@PathVariable Long itemId) {
-        ResultModel result = itemService.getItemDescById(itemId);
+    public TbItemDesc getItemDescById(@PathVariable Long itemId) {
+        TbItemDesc result = itemService.getItemDescById(itemId);
         return result;
     }
 
