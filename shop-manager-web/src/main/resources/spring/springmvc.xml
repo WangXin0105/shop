@@ -12,7 +12,6 @@
 	<!-- 加载配置文件 -->
 	<context:property-placeholder location="classpath:conf/resource.properties" />
 
-	<import resource="applicationContext-activemq.xml"/>
 	<context:component-scan base-package="cn.edu.nun.controller" />
 	<mvc:annotation-driven />
 
