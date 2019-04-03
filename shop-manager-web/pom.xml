@@ -120,6 +120,11 @@
             <groupId>org.apache.activemq</groupId>
             <artifactId>activemq-all</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.qiniu</groupId>
+            <artifactId>qiniu-java-sdk</artifactId>
+            <version>7.2.7</version>
+        </dependency>
     </dependencies>
     <!-- 配置tomcat插件 -->
     <build>

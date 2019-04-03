@@ -33,7 +33,7 @@
 
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="shop-manager-web"/>
-	<dubbo:registry protocol="zookeeper" address="192.168.5.155:2181"/>
+	<dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>
 	<dubbo:reference interface="cn.edu.nun.service.ItemService" id="itemService"/>
 	<dubbo:reference interface="cn.edu.nun.service.ItemCatService" id="itemCatService"/>
 	<dubbo:reference interface="cn.edu.nun.content.service.ContentCatService" id="contentCatService" />
