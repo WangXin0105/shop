@@ -18,6 +18,8 @@
         <module>../shop-item-web</module>
         <module>../shop-sso</module>
         <module>../shop-sso-web</module>
+        <module>../shop-cart</module>
+        <module>../shop-cart-web</module>
     </modules>
     <packaging>pom</packaging>
 
