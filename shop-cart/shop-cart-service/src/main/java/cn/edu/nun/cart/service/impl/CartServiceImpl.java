@@ -103,7 +103,11 @@ public class CartServiceImpl implements CartService {
         return ResultModel.ok();
     }
 
-
+    @Override
+    public ResultModel clearCartItem(long userId) {
+        jedisClient.del(REDIS_CART_PRE + ":" + userId);
+        return ResultModel.ok();
+    }
 
 }
 

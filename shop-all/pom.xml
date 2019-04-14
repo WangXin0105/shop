@@ -20,6 +20,8 @@
         <module>../shop-sso-web</module>
         <module>../shop-cart</module>
         <module>../shop-cart-web</module>
+        <module>../shop-order</module>
+        <module>../shop-order-web</module>
     </modules>
     <packaging>pom</packaging>
 

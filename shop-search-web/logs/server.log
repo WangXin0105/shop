@@ -2116,3 +2116,159 @@ No mapping found for HTTP request with URI [/html/web/_public/_ajaxStaticMenu.ht
 
 [WARN ] 2019-04-05 21:47:27,919 method:org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1136)
 No mapping found for HTTP request with URI [/html/web/_public/_ajaxStaticMenu.html] in DispatcherServlet with name 'shop-search-web'
+
+
+[INFO ] 2019-04-14 10:30:16,985 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+FrameworkServlet 'shop-search-web': initialization started
+
+
+[INFO ] 2019-04-14 10:30:17,032 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'shop-search-web-servlet': startup date [Sun Apr 14 10:30:17 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-04-14 10:30:17,063 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2019-04-14 10:30:17,423 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2019-04-14 10:30:17,548 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [conf/resource.properties]
+
+
+[INFO ] 2019-04-14 10:30:17,548 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2019-04-14 10:30:18,061 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\joker\.dubbo\dubbo-registry-127.0.0.1.cache, data: {cn.edu.nun.content.service.ContentService=empty://192.168.25.1/cn.edu.nun.content.service.ContentService?application=shop-portal-web&category=configurators&dubbo=2.5.3&interface=cn.edu.nun.content.service.ContentService&methods=getContentListByCid,addContent&pid=10296&revision=1.0-SNAPSHOT&side=consumer&timestamp=1555208951470 empty://192.168.25.1/cn.edu.nun.content.service.ContentService?application=shop-portal-web&category=routers&dubbo=2.5.3&interface=cn.edu.nun.content.service.ContentService&methods=getContentListByCid,addContent&pid=10296&revision=1.0-SNAPSHOT&side=consumer&timestamp=1555208951470 dubbo://192.168.25.1:20881/cn.edu.nun.content.service.ContentService?anyhost=true&application=shop-content&dubbo=2.5.3&interface=cn.edu.nun.content.service.ContentService&methods=getContentListByCid,addContent&pid=5824&side=provider&timeout=600000&timestamp=1555208795203, cn.edu.nun.search.service.SearchService=empty://192.168.25.1:20882/cn.edu.nun.search.service.SearchService?anyhost=true&application=shop-search&category=configurators&check=false&dubbo=2.5.3&interface=cn.edu.nun.search.service.SearchService&methods=search&pid=5084&side=provider&timeout=600000&timestamp=1555208817714, cn.edu.nun.sso.service.TokenService=empty://192.168.25.1/cn.edu.nun.sso.service.TokenService?application=shop-sso-web&category=configurators&dubbo=2.5.3&interface=cn.edu.nun.sso.service.TokenService&methods=getUserByToken&pid=8208&revision=1.0-SNAPSHOT&side=consumer&timestamp=1555208987061 empty://192.168.25.1/cn.edu.nun.sso.service.TokenService?application=shop-sso-web&category=routers&dubbo=2.5.3&interface=cn.edu.nun.sso.service.TokenService&methods=getUserByToken&pid=8208&revision=1.0-SNAPSHOT&side=consumer&timestamp=1555208987061 dubbo://192.168.25.1:20883/cn.edu.nun.sso.service.TokenService?anyhost=true&application=shop-sso&dubbo=2.5.3&interface=cn.edu.nun.sso.service.TokenService&methods=getUserByToken&pid=11512&side=provider&timeout=600000&timestamp=1555208873643, cn.edu.nun.sso.service.LoginService=empty://192.168.25.1/cn.edu.nun.sso.service.LoginService?application=shop-sso-web&category=configurators&dubbo=2.5.3&interface=cn.edu.nun.sso.service.LoginService&methods=userLogin&pid=8208&revision=1.0-SNAPSHOT&side=consumer&timestamp=1555208981649 empty://192.168.25.1/cn.edu.nun.sso.service.LoginService?application=shop-sso-web&category=routers&dubbo=2.5.3&interface=cn.edu.nun.sso.service.LoginService&methods=userLogin&pid=8208&revision=1.0-SNAPSHOT&side=consumer&timestamp=1555208981649 dubbo://192.168.25.1:20883/cn.edu.nun.sso.service.LoginService?anyhost=true&application=shop-sso&dubbo=2.5.3&interface=cn.edu.nun.sso.service.LoginService&methods=userLogin&pid=11512&side=provider&timeout=600000&timestamp=1555208873596, cn.edu.nun.cart.service.CartService=empty://192.168.25.1:20884/cn.edu.nun.cart.service.CartService?anyhost=true&application=shop-cart&category=configurators&check=false&dubbo=2.5.3&interface=cn.edu.nun.cart.service.CartService&methods=addCart,mergeCart,updateCartNum,getCartList,deleteCartItem,clearCartItem&pid=11704&side=provider&timeout=600000&timestamp=1555208839845, cn.edu.nun.search.service.SearchItemService=empty://192.168.25.1:20882/cn.edu.nun.search.service.SearchItemService?anyhost=true&application=shop-search&category=configurators&check=false&dubbo=2.5.3&interface=cn.edu.nun.search.service.SearchItemService&methods=importAllItems&pid=5084&side=provider&timeout=600000&timestamp=1555208812521, cn.edu.nun.order.service.OrderService=empty://192.168.25.1:20885/cn.edu.nun.order.service.OrderService?anyhost=true&application=shop-order&category=configurators&check=false&dubbo=2.5.3&interface=cn.edu.nun.order.service.OrderService&methods=createOrder&pid=1004&side=provider&timeout=600000&timestamp=1555208895382, cn.edu.nun.service.ItemCatService=empty://192.168.25.1:20880/cn.edu.nun.service.ItemCatService?anyhost=true&application=shop-manager&category=configurators&check=false&dubbo=2.5.3&interface=cn.edu.nun.service.ItemCatService&methods=getItemCatList&pid=9480&side=provider&timeout=600000&timestamp=1555208770001, cn.edu.nun.sso.service.RegisterService=empty://192.168.25.1/cn.edu.nun.sso.service.RegisterService?application=shop-sso-web&category=configurators&dubbo=2.5.3&interface=cn.edu.nun.sso.service.RegisterService&methods=checkData,register&pid=8208&revision=1.0-SNAPSHOT&side=consumer&timestamp=1555208986952 empty://192.168.25.1/cn.edu.nun.sso.service.RegisterService?application=shop-sso-web&category=routers&dubbo=2.5.3&interface=cn.edu.nun.sso.service.RegisterService&methods=checkData,register&pid=8208&revision=1.0-SNAPSHOT&side=consumer&timestamp=1555208986952 dubbo://192.168.25.1:20883/cn.edu.nun.sso.service.RegisterService?anyhost=true&application=shop-sso&dubbo=2.5.3&interface=cn.edu.nun.sso.service.RegisterService&methods=checkData,register&pid=11512&side=provider&timeout=600000&timestamp=1555208868370, cn.edu.nun.content.service.ContentCatService=empty://192.168.25.1:20881/cn.edu.nun.content.service.ContentCatService?anyhost=true&application=shop-content&category=configurators&check=false&dubbo=2.5.3&interface=cn.edu.nun.content.service.ContentCatService&methods=addContentCategory,updateContentCategory,deleteContentCategory,getContentCatList&pid=5824&side=provider&timeout=600000&timestamp=1555208789738, cn.edu.nun.service.ItemService=empty://192.168.25.1:20880/cn.edu.nun.service.ItemService?anyhost=true&application=shop-manager&category=configurators&check=false&dubbo=2.5.3&interface=cn.edu.nun.service.ItemService&methods=addItem,getItemList,deleteItem,getItemById,updateItem,getItemDescById&pid=9480&side=provider&timeout=600000&timestamp=1555208764229,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        =}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2019-04-14 10:30:18,331 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2019-04-14 10:30:22,963 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2019-04-14 10:30:22,963 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=DESKTOP-I94S2O2
+
+
+[INFO ] 2019-04-14 10:30:22,963 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.8.0_131
+
+
+[INFO ] 2019-04-14 10:30:22,963 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2019-04-14 10:30:22,963 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=C:\Program Files\Java\jdk1.8.0_131\jre
+
+
+[INFO ] 2019-04-14 10:30:22,963 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=E:\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar;E:\IntelliJ IDEA 2018.1.5\lib\idea_rt.jar;C:\Users\joker\AppData\Local\Temp\capture80jars\debugger-agent.jar
+
+
+[INFO ] 2019-04-14 10:30:22,963 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;E:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\System32\OpenSSH\;E:\Git\cmd;E:\Ruby\Ruby23-x64\bin;E:\Bandizip\;C:\Users\joker\AppData\Local\Microsoft\WindowsApps;.
+
+
+[INFO ] 2019-04-14 10:30:22,963 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\joker\AppData\Local\Temp\
+
+
+[INFO ] 2019-04-14 10:30:22,963 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2019-04-14 10:30:22,963 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 10
+
+
+[INFO ] 2019-04-14 10:30:22,963 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2019-04-14 10:30:22,963 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=10.0
+
+
+[INFO ] 2019-04-14 10:30:22,963 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=joker
+
+
+[INFO ] 2019-04-14 10:30:22,963 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\joker
+
+
+[INFO ] 2019-04-14 10:30:22,963 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=D:\IDEAWorkspace\shop\shop-search-web
+
+
+[INFO ] 2019-04-14 10:30:22,979 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@285107a2
+
+
+[INFO ] 2019-04-14 10:30:23,057 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2019-04-14 10:30:23,057 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+
+[INFO ] 2019-04-14 10:30:23,073 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x16a19a6d0d20009, negotiated timeout = 30000
+
+
+[INFO ] 2019-04-14 10:30:23,073 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2019-04-14 10:30:23,104 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: consumer://192.168.25.1/cn.edu.nun.search.service.SearchService?application=shop-search-web&category=consumers&check=false&dubbo=2.5.3&interface=cn.edu.nun.search.service.SearchService&methods=search&pid=9160&revision=1.0-SNAPSHOT&side=consumer&timestamp=1555209017876, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-14 10:30:23,120 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: consumer://192.168.25.1/cn.edu.nun.search.service.SearchService?application=shop-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.edu.nun.search.service.SearchService&methods=search&pid=9160&revision=1.0-SNAPSHOT&side=consumer&timestamp=1555209017876, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-14 10:30:23,167 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.25.1/cn.edu.nun.search.service.SearchService?application=shop-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=cn.edu.nun.search.service.SearchService&methods=search&pid=9160&revision=1.0-SNAPSHOT&side=consumer&timestamp=1555209017876, urls: [dubbo://192.168.25.1:20882/cn.edu.nun.search.service.SearchService?anyhost=true&application=shop-search&dubbo=2.5.3&interface=cn.edu.nun.search.service.SearchService&methods=search&pid=5084&side=provider&timeout=600000&timestamp=1555208817714, empty://192.168.25.1/cn.edu.nun.search.service.SearchService?application=shop-search-web&category=configurators&dubbo=2.5.3&interface=cn.edu.nun.search.service.SearchService&methods=search&pid=9160&revision=1.0-SNAPSHOT&side=consumer&timestamp=1555209017876, empty://192.168.25.1/cn.edu.nun.search.service.SearchService?application=shop-search-web&category=routers&dubbo=2.5.3&interface=cn.edu.nun.search.service.SearchService&methods=search&pid=9160&revision=1.0-SNAPSHOT&side=consumer&timestamp=1555209017876], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-14 10:30:23,424 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:287)
+ [DUBBO] Successed connect to server /192.168.25.1:20882 from NettyClient 192.168.25.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0x88056d0a, /192.168.25.1:8512 => /192.168.25.1:20882]], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-14 10:30:23,424 method:com.alibaba.dubbo.remoting.transport.AbstractClient.<init>(AbstractClient.java:105)
+ [DUBBO] Start NettyClient DESKTOP-I94S2O2/192.168.25.1 connect to the server /192.168.25.1:20882, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-14 10:30:23,518 method:com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:423)
+ [DUBBO] Refer dubbo service cn.edu.nun.search.service.SearchService from url zookeeper://127.0.0.1:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=shop-search-web&check=false&dubbo=2.5.3&interface=cn.edu.nun.search.service.SearchService&methods=search&pid=9160&revision=1.0-SNAPSHOT&side=consumer&timeout=600000&timestamp=1555209017876, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-04-14 10:30:23,783 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:527)
+Mapped "{[/search]}" onto public java.lang.String cn.edu.nun.search.controller.SearchController.searchItemList(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2019-04-14 10:30:24,182 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'shop-search-web-servlet': startup date [Sun Apr 14 10:30:17 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-04-14 10:30:24,270 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'shop-search-web-servlet': startup date [Sun Apr 14 10:30:17 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-04-14 10:30:24,488 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508)
+FrameworkServlet 'shop-search-web': initialization completed in 7487 ms
+
+
+[INFO ] 2019-04-14 10:57:27,483 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.25.1:20882,url:dubbo://192.168.25.1:20882/cn.edu.nun.search.service.SearchService?anyhost=true&application=shop-search-web&check=false&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=cn.edu.nun.search.service.SearchService&methods=search&pid=9160&revision=1.0-SNAPSHOT&side=consumer&timeout=600000&timestamp=1555209017876, dubbo version: 2.5.3, current host: 192.168.25.1
