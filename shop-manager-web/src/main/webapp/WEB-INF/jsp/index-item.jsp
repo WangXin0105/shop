@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<div>
-	 <a class="easyui-linkbutton" onclick="importItems()">一键导入商品数据到索引库</a>
+<div style="text-align: center;">
+	 <a style="height: 35px;" class="easyui-linkbutton" onclick="importItems()">导入索引</a>
 </div>
 <script type="text/javascript">
 	function importItems() {

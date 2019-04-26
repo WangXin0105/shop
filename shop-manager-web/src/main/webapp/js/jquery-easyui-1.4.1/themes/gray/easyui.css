@@ -93,16 +93,16 @@
   background: url('images/panel_tools.png') no-repeat -16px 0px;
 }
 .panel-tool-min {
-  background: url('images/panel_tools.png') no-repeat 0px 0px;
+  background: no-repeat 0px 0px;
 }
 .panel-tool-max {
-  background: url('images/panel_tools.png') no-repeat 0px -16px;
+  background: no-repeat 0px -16px;
 }
 .panel-tool-restore {
   background: url('images/panel_tools.png') no-repeat -16px -16px;
 }
 .panel-tool-collapse {
-  background: url('images/panel_tools.png') no-repeat -32px 0;
+  background: no-repeat -32px 0;
 }
 .panel-tool-expand {
   background: url('images/panel_tools.png') no-repeat -32px -16px;
@@ -334,10 +334,12 @@
   display: inline-block;
   vertical-align: top;
   width: auto;
-  line-height: 24px;
-  font-size: 12px;
+  line-height: 50px;
+  font-size: 30px;
   padding: 0;
   margin: 0 4px;
+  height: 50px;
+  width: 150px;
 }
 .l-btn-icon {
   display: inline-block;
@@ -2251,10 +2253,10 @@
 }
 .messager-button {
   text-align: center;
-  padding-top: 10px;
+  /*padding-top: 10px;*/
 }
 .messager-button .l-btn {
-  width: 70px;
+  /*width: 70px;*/
 }
 .messager-icon {
   float: left;
@@ -2299,7 +2301,7 @@
   padding: 0;
 }
 .tree-node {
-  height: 18px;
+  height: 40px;
   white-space: nowrap;
   cursor: pointer;
 }
@@ -2356,13 +2358,13 @@
   background: url('images/tree_icons.png') no-repeat -160px 0;
 }
 .tree-folder {
-  background: url('images/tree_icons.png') no-repeat -208px 0;
+  background: no-repeat -208px 0;
 }
 .tree-folder-open {
-  background: url('images/tree_icons.png') no-repeat -224px 0;
+  background: no-repeat -224px 0;
 }
 .tree-file {
-  background: url('images/tree_icons.png') no-repeat -240px 0;
+  background: no-repeat -240px 0;
 }
 .tree-loading {
   background: url('images/loading.gif') no-repeat center center;
@@ -2377,14 +2379,14 @@
   background: url('images/tree_icons.png') no-repeat -240px -18px;
 }
 .tree-title {
-  font-size: 12px;
+  font-size: 20px;
   display: inline-block;
   text-decoration: none;
   vertical-align: top;
   white-space: nowrap;
   padding: 0 2px;
-  height: 18px;
-  line-height: 18px;
+  height: 26px;
+  line-height: 26px;
 }
 .tree-node-proxy {
   font-size: 12px;

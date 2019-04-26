@@ -1146,4 +1146,14 @@
 	width: 30%;
 	text-align: center;
 }
-
+#itemAddForm tr {
+	height: 70px;
+}
+#itemAddForm .selectItemCat .l-btn-text {
+	height: 50px;
+	width: 150px;
+}
+#itemAddForm .picFileUpload .l-btn-text {
+	height: 50px;
+	width: 150px;
+}

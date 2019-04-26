@@ -142,7 +142,7 @@ KindEditor.lang({
 	'image.imgTitle' : '图片说明',
 	'image.upload' : '浏览...',
 	'image.viewServer' : '图片空间',
-	'multiimage.uploadDesc' : '允许用户同时上传<%=uploadLimit%>张图片，单张图片容量不超过<%=sizeLimit%>',
+	'multiimage.uploadDesc' : '',
 	'multiimage.startUpload' : '开始上传',
 	'multiimage.clearAll' : '全部清空',
 	'multiimage.insertAll' : '全部插入',

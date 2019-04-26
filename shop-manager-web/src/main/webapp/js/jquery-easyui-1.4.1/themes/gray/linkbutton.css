@@ -20,6 +20,8 @@
   margin: 0;
   padding: 0;
   vertical-align: top;
+  width: 150px;
+  height: 45px;
 }
 .l-btn-text {
   display: inline-block;
