@@ -118,8 +118,7 @@ var E3 = {
     			    height:"450",
     			    modal:true,
     			    closed:true,
-    			    iconCls:'icon-save',
-    			    title:'选择类目',
+    			    title:'选择分类',
     			    onOpen : function(){
     			    	var _win = this;
     			    	$("ul",_win).tree({
@@ -137,12 +136,14 @@ var E3 = {
     			    			}
     			    		}
     			    	});
+                        $(".tree-icon,.tree-file").removeClass("tree-icon tree-file");
+                        $(".tree-icon,.tree-folder").removeClass("tree-icon tree-folder tree-folder-open tree-folder-closed");
     			    },
     			    onClose : function(){
     			    	$(this).window("destroy");
     			    }
     			}).window('open');
-    		});
+            });
     	});
     },
     
@@ -169,7 +170,7 @@ var E3 = {
      */
     createWindow : function(params){
     	$("<div>").css({padding:"5px"}).window({
-    		width : params.width?params.width:"80%",
+    		width : params.width?params.width:"65%",
     		height : params.height?params.height:"80%",
     		modal:true,
     		title : params.title?params.title:" ",
