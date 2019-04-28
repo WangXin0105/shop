@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Cache-Control" content="max-age=300" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>${query} - 商品搜索 - 宜立方商城</title>
+<title>${query} - 商品搜索</title>
 	<link rel="stylesheet" type="text/css" href="/css/productList.css" />
 <link rel="stylesheet" type="text/css" href="/css/base_w1200.css" />
 <link rel="stylesheet" type="text/css" href="/css/common.css" />

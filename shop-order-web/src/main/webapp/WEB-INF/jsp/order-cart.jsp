@@ -12,7 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
 <meta name="format-detection" content="telephone=no" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>订单结算页 -宜立方商城</title>
+<title>订单结算页</title>
 <!--结算页面样式-->	
 <link rel="stylesheet" type="text/css" href="/css/jquery.alerts.css?v=20160713" />
 <link rel="stylesheet" type="text/css" href="/css/head.css?v=20160713" />
@@ -30,7 +30,7 @@
 <jsp:include page="commons/header.jsp" />
 <div class="orderMain">
 <form id="orderForm" class="hide" action="/order/create.html" method="post">
-	<input type="hidden" name="paymentType" value="2"/>
+	<input type="hidden" name="paymentType" value="1"/>
 	<input type="hidden" name="postFee" value="10"/>
 	<c:forEach items="${cartList }" var="cart" varStatus="status">
 		<c:set var="totalPrice"  value="${ totalPrice + (cart.price * cart.num)}"/>
@@ -42,12 +42,12 @@
 		<input type="hidden" name="orderItems[${status.index}].picPath" value="${cart.image}"/>
 	</c:forEach>
 	<input type="hidden" name="payment" value="<fmt:formatNumber groupingUsed="false" maxFractionDigits="2" minFractionDigits="2" value="${totalPrice/100 }"/>"/>
-	<input type="hidden" name="orderShipping.receiverName" value="入云龙"/>
-	<input type="hidden" name="orderShipping.receiverMobile" value="15800888888"/>
-	<input type="hidden" name="orderShipping.receiverState" value="北京"/>
-	<input type="hidden" name="orderShipping.receiverCity" value="北京"/>
-	<input type="hidden" name="orderShipping.receiverDistrict" value="昌平区"/>
-	<input type="hidden" name="orderShipping.receiverAddress" value="北京市昌平区北七家镇 修正大厦"/>
+	<input type="hidden" name="orderShipping.receiverName" value="王鑫"/>
+	<input type="hidden" name="orderShipping.receiverMobile" value="18795207138"/>
+	<input type="hidden" name="orderShipping.receiverState" value="宁夏"/>
+	<input type="hidden" name="orderShipping.receiverCity" value="银川"/>
+	<input type="hidden" name="orderShipping.receiverDistrict" value="西夏区"/>
+	<input type="hidden" name="orderShipping.receiverAddress" value="北方民族大学"/>
 </form>
   <h3 class="orderHd">填写并核对订单信息</h3>
   <div id="userAddrId" class="orderTbody ">
@@ -55,7 +55,7 @@
     <div class="orderItem">
         <div class="orderCurr" id="userAddress" style="display:block;">
           <ul>
-            <li>入云龙&nbsp;&nbsp;&nbsp;&nbsp;15800888888&nbsp;&nbsp;&nbsp;&nbsp;北京市&nbsp;&nbsp;昌平区&nbsp;&nbsp;北七家镇 修正大厦</li>
+            <li>王鑫&nbsp;&nbsp;&nbsp;&nbsp;18795207138&nbsp;&nbsp;&nbsp;&nbsp;宁夏&nbsp;&nbsp;银川&nbsp;&nbsp;西夏区&nbsp;&nbsp;北方民族大学</li>
           </ul>
         </div>
     </div>
@@ -73,7 +73,7 @@
 					<span class="tOrder" na="chai1">订单1</span>
 					<div class="sOrders">
 						<div class="scon">
-							<strong>宜立方速运</strong>负责配送。<br>商品下单后尽快为您发货
+							<strong>顺丰速运</strong>负责配送。<br>商品下单后尽快为您发货
 						</div>
 					</div>
 					<span class="clear"></span>
@@ -96,7 +96,7 @@
     </div>
   </div>
   <div class="orderTbody" style="width:958px;border-bottom:0 none;">
-  <div class="backToCart"><a style=" text-decoration:underline;" target="" href="/cart/index/">返回修改购物车</a></div>
+  <div class="backToCart"><a style=" text-decoration:underline;" target="" href="http://localhost:10011/cart/cart.html">返回修改购物车</a></div>
   <h3 class="orderTitle">商品信息：</h3>
   <span class="clear"></span>
   <div class="orderPItem">

@@ -10,7 +10,7 @@
       	<a href="http://localhost:10009/page/register">免费注册</a>
       </li>
       <!--<li id='qiyeLogin'><a href='http://www.sfme.me/login.jhtml' target='_blank' rel='nofollow'>员工福利</a></li>-->
-      <li class="myOrder"><a name="sfbest_hp_hp_head_OrderList" class="trackref" href="http://home.e3mall.cn/myorder/index/" rel="nofollow">我的订单</a></li>
+      <%--<li class="myOrder"><a name="sfbest_hp_hp_head_OrderList" class="trackref" href="http://home.e3mall.cn/myorder/index/" rel="nofollow">我的订单</a></li>
       <li class="menus">
         <a name="sfbest_hp_hp_head_home1" href="http://home.e3mall.cn/my/index/" rel="nofollow" class="trackref t">我的优选</a><b></b>
         <span class="outline"></span>
@@ -98,7 +98,7 @@
           <div class="aBg"></div>
           <div class="aCt"></div>
         </div>
-       </li>
+       </li>--%>
     </ul>
     <span class="clear"></span>
   </div>

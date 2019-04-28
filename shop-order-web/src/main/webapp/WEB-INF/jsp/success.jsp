@@ -16,7 +16,7 @@
 <link rel="stylesheet" type="text/css" href="/css/head.css?v=20160713" />
 <link rel="stylesheet" type="text/css" href="/css/newpay.css?v=20160713" />
 <script type="text/javascript" src="/js/jquery-1.5.1.min.js?v=20160713"></script>
-   <title>订单成功页面 - 宜立方商城</title>
+   <title>订单成功页面</title>
 </head> <body id="mainframe">
 <!--shortcut start-->
 <jsp:include page="commons/shortcut.jsp" />

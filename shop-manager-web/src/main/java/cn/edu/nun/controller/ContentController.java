@@ -1,5 +1,6 @@
 package cn.edu.nun.controller;
 
+import cn.edu.nun.common.pojo.DataModel;
 import cn.edu.nun.common.utils.ResultModel;
 import cn.edu.nun.content.service.ContentService;
 import cn.edu.nun.pojo.TbContent;
@@ -20,6 +21,27 @@ public class ContentController {
 	@ResponseBody
 	public ResultModel addContent(TbContent content) {
 		ResultModel result = contentService.addContent(content);
+		return result;
+	}
+
+	@RequestMapping("/content/list")
+	@ResponseBody
+	public DataModel getContentList(Integer page, Integer rows) {
+		DataModel dataModel = contentService.getContentList(page, rows);
+		return dataModel;
+	}
+
+	@RequestMapping("/content/update")
+	@ResponseBody
+	public ResultModel updateContent(TbContent content) {
+		ResultModel result = contentService.updateItem(content);
+		return result;
+	}
+
+	@RequestMapping("/content/delete")
+	@ResponseBody
+	public ResultModel deleteContent(Long ids) {
+		ResultModel result = contentService.deleteContent(ids);
 		return result;
 	}
 }

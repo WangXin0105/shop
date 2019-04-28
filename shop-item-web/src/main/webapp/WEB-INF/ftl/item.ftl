@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>${item.title } - 宜立方商城</title>
+    <title>${item.title } - 商城</title>
     <script>
         var _SF_CFG = {
             www_url:'http://www.e3mall.cn',
             m_url:'http://m.e3mall.cn',
-            productId:${item.id},
+            productId:${item.id?c},
             number: 1600229585,
             minBuy: 1,
             maxBuy: 99,
@@ -96,14 +96,14 @@
                     </div>
                     <div class="chooseBtns" id="buy-btn-sf">
                         <div class="pAmount">
-                            <span><input type="text" id="number_${item.id}" class="text" value=""></span>
+                            <span><input type="text" id="number_${item.id?c}" class="text" value=""></span>
                             <span>
                                 <a href="javascript:;" id="add-sell-num" class="p-add">+</a>
                                 <a href="javascript:;" id="reduce-sell-num" class="p-reduce disable">-</a>
                             </span>
                         </div>
-                        <div class="pBtn" id="cart-add-btn-sf"><a onclick="cartAdd(${item.id}, 0, 1, 0, 1, this);"><b></b>加入购物车</a></div>
-                        <div class="pBtn quickBuy" style="display: none;" id="quickBuy" title="快速下单，直达填写订单页面"><a onclick="oneKeyBuy(${item.id}, 0, 1, 0, 1, this);">一键购买</a></div>
+                        <div class="pBtn" id="cart-add-btn-sf"><a onclick="cartAdd(${item.id?c}, 0, 1, 0, 1, this);"><b></b>加入购物车</a></div>
+                        <div class="pBtn quickBuy" style="display: none;" id="quickBuy" title="快速下单，直达填写订单页面"><a onclick="oneKeyBuy(${item.id?c}, 0, 1, 0, 1, this);">一键购买</a></div>
                         <div class="yj_time" id="sendTime">预计发货时间：<br>2014-02-28 08:59</div>
                         <div class="phone_client phone_border"><div id="phone_time">扫描下载客户端<br><em>先摇券 后买单</em></div>
                             <!--手机二维码显示层-->
@@ -204,7 +204,7 @@
                     <li>产地：<span><a href="/food/7331-0-45-0-0-2-0-0-0-0-0.html" title="中国" target="_blank">中国</a></span>
                     </li>
                     <li>重量：1.4kg （含包装）</li>
-                    <li>商品编号：${item.id }</li>
+                    <li>商品编号：${item.id?c }</li>
                     <li class="card-pay">
                         <span class="card-pay-left">优选卡</span>
                         <span class="card-pay-right">支持优选卡支付</span>
@@ -237,7 +237,7 @@
                 <li class="curr" pcont-target="div-detail"><a title="商品详情" href="javascript:void(0);">商品介绍</a></li>
                 <li pcont-target="div-comment"><a title="用户评价" href="javascript:void(0);">评价<b>(<font class="comment-total-sf">0</font>)</b></a></li>
             </ul>
-            <div id="add-cart-r-btn-sf" class="p-btn"><a href="javascript:void(0);" data_url="http://p02.e3mall.cn/2016/1600229585/thumb_1600229585_1_1.jpg" pid="${item.id}">加入购物车</a></div>
+            <div id="add-cart-r-btn-sf" class="p-btn"><a href="javascript:void(0);" data_url="http://p02.e3mall.cn/2016/1600229585/thumb_1600229585_1_1.jpg" pid="${item.id?c}">加入购物车</a></div>
         </div>
         <div class="clear" id="flow-layer-sf"></div>
         <div class="pCont cpjs_box" id="div-detail">
@@ -259,7 +259,7 @@
             </div>
             <div class="pJiucuo">
                 如果您发现商品信息存在问题，<a target="_blank"
-                                 href="http://www.e3mall.cn/ProductCorrection/ProductCorrection/pId/${item.id}"
+                                 href="http://www.e3mall.cn/ProductCorrection/ProductCorrection/pId/${item.id?c}"
                                  rel="nofollow">欢迎纠错</a>
             </div>
             <div class="product_info">${itemDesc.itemDesc }</div>
@@ -288,7 +288,7 @@
                 </div>
                 <div id="have-none-comments" style="padding-left:10px;">还木有评价额，快抢沙发吧！</div><ul class="pComment" id="comment-lists-sf"></ul>
                 <div class="plpage">
-                    <div class="showAll" style="display: none;"><a target="_blank" href="/reviewlist/0/${item.id}">[查看全部评价]</a></div>
+                    <div class="showAll" style="display: none;"><a target="_blank" href="/reviewlist/0/${item.id?c}">[查看全部评价]</a></div>
                     <div class="pages" id="comment-ajax-page-sf"><span class="prev disabled"><b class="prevarr"></b>上一页</span><span class="current">1</span><span class="next disabled">下一页<b class="nextarr"></b></span></div>
                 </div>
             </div>
