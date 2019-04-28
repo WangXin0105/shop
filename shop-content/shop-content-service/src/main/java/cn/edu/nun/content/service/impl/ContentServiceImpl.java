@@ -1,13 +1,17 @@
 package cn.edu.nun.content.service.impl;
 
 import cn.edu.nun.common.jedis.JedisClient;
+import cn.edu.nun.common.pojo.DataModel;
 import cn.edu.nun.common.utils.JsonUtils;
 import cn.edu.nun.common.utils.ResultModel;
 import cn.edu.nun.content.service.ContentService;
 import cn.edu.nun.mapper.TbContentMapper;
 import cn.edu.nun.pojo.TbContent;
 import cn.edu.nun.pojo.TbContentExample;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -61,6 +65,37 @@ public class ContentServiceImpl implements ContentService {
             e.printStackTrace();
         }
         return list;
+    }
+
+    @Override
+    public DataModel getContentList(int page, int rows) {
+        DataModel dataModel = new DataModel();
+        PageHelper.startPage(page, rows);
+        TbContentExample example = new TbContentExample();
+        List<TbContent> list = contentMapper.selectByExample(example);
+        PageInfo pageInfo = new PageInfo(list);
+        dataModel.setTotal(pageInfo.getTotal());
+        dataModel.setRows(list);
+        return dataModel;
+    }
+
+    @Override
+    public ResultModel deleteContent(long id) {
+        TbContent content = contentMapper.selectByPrimaryKey(id);
+        contentMapper.deleteByPrimaryKey(id);
+        //缓存同步,删除缓存中对应的数据。
+        jedisClient.hdel(CONTENT_LIST, content.getCategoryId().toString());
+        return ResultModel.ok();
+    }
+
+    @Override
+    public ResultModel updateItem(TbContent content) {
+        TbContent tbContent = contentMapper.selectByPrimaryKey(content.getId());
+        BeanUtils.copyProperties(content,tbContent);
+        contentMapper.updateByPrimaryKeySelective(tbContent);
+        //缓存同步,删除缓存中对应的数据。
+        jedisClient.hdel(CONTENT_LIST, content.getCategoryId().toString());
+        return ResultModel.ok();
     }
 
 }

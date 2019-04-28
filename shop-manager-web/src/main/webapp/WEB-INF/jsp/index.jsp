@@ -30,8 +30,9 @@
 	<div style="width: 20%;float: left;font-size: 30px;line-height: 110px;margin-left: 50px;">后台管理主页</div>
 	<div id="goodManager" style="width: 10%;float: left;height: 100%;background: burlywood;" class="easyui-linkbutton" onclick="showManager(this);">商品管理</div>
 	<div id="contentManager" style="width: 10%;float: left;height: 100%;background: burlywood;margin-left: 5%;" class="easyui-linkbutton" onclick="showManager(this);">主页管理</div>
-	<div id="indexManager" style="width: 10%;float: left;height: 100%;background: burlywood;margin-left: 5%;" class="easyui-linkbutton" onclick="showManager(this);">索引管理</div>
-	<div id="sallerLogin" style="width: 10%;float: left;height: 100%;background: burlywood;margin-left: 5%;" class="easyui-linkbutton" onclick="">登陆</div>
+	<%--<div id="indexManager" style="width: 10%;float: left;height: 100%;background: burlywood;margin-left: 5%;" class="easyui-linkbutton" onclick="showManager(this);">索引管理</div>--%>
+	<div id="orderManager" style="width: 10%;float: left;height: 100%;background: burlywood;margin-left: 5%;" class="easyui-linkbutton" onclick="showManager(this);">订单管理</div>
+	<div id="sallerLogin" style="width: 10%;float: left;height: 100%;background: burlywood;margin-left: 5%;" class="easyui-linkbutton" onclick="location.href='admin/login';">登陆</div>
 </div>
 <div data-options="region:'west',title:'',split:true" style="width:300px;">
 	<ul id="menu" class="easyui-tree" style="margin-top: 10px;margin-left: 45px;">
@@ -40,20 +41,26 @@
 			<ul>
 				<li data-options="attributes:{'url':'item-add'}">新增商品</li>
 				<li data-options="attributes:{'url':'item-list'}">查询商品</li>
-				<li data-options="attributes:{'url':'item-param-list'}">规格参数</li>
+				<%--<li data-options="attributes:{'url':'item-param-list'}">规格参数</li>--%>
 			</ul>
 		</li>
 		<li>
 			<span>主页管理</span>
 			<ul>
-				<li data-options="attributes:{'url':'content-category'}">内容分类管理</li>
-				<li data-options="attributes:{'url':'content'}">内容管理</li>
+				<li data-options="attributes:{'url':'content-category'}">主页分类管理</li>
+				<li data-options="attributes:{'url':'content'}">主页内容管理</li>
 			</ul>
 		</li>
-		<li>
+		<%--<li>
 			<span>索引管理</span>
 			<ul>
 				<li data-options="attributes:{'url':'index-item'}">导入索引</li>
+			</ul>
+		</li>--%>
+		<li>
+			<span>订单管理</span>
+			<ul>
+				<li data-options="attributes:{'url':'order'}">处理订单</li>
 			</ul>
 		</li>
 	</ul>
@@ -91,11 +98,21 @@
         $(".tree-icon,.tree-file").removeClass("tree-icon tree-file");
         $(".tree-icon,.tree-folder").removeClass("tree-icon tree-folder tree-folder-open tree-folder-closed");
         $("#menu .tree-expanded").removeClass("tree-expanded");
-        $("#menu #_easyui_tree_1,#_easyui_tree_5,#_easyui_tree_8").addClass("left_menu");
+        $("#menu #_easyui_tree_1,#_easyui_tree_4,#_easyui_tree_7,#_easyui_tree_10").addClass("left_menu");
         $("#tabs .tabs-wrap").hide();
-        $("#menu").children("li").eq(0).hide();
-        $("#menu").children("li").eq(1).hide();
-        $("#menu").children("li").eq(2).hide();
+
+        var isLogin = window.location.href;
+        if(isLogin.indexOf("login=true") >= 0){
+            $("#menu").children("li").eq(0).show();
+            $("#menu").children("li").eq(1).hide();
+            $("#menu").children("li").eq(2).hide();
+            $("#menu").children("li").eq(3).hide();
+		} else {
+            $("#menu").children("li").eq(0).hide();
+            $("#menu").children("li").eq(1).hide();
+            $("#menu").children("li").eq(2).hide();
+            $("#menu").children("li").eq(3).hide();
+		}
     });
     setInterval("document.getElementById('nowTime').innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
 
@@ -104,14 +121,22 @@
             $("#menu").children("li").eq(0).show();
             $("#menu").children("li").eq(1).hide();
             $("#menu").children("li").eq(2).hide();
+            $("#menu").children("li").eq(3).hide();
         } else if (ele.id == "contentManager") {
             $("#menu").children("li").eq(0).hide();
             $("#menu").children("li").eq(1).show();
             $("#menu").children("li").eq(2).hide();
+            $("#menu").children("li").eq(3).hide();
         } else if (ele.id == "indexManager") {
             $("#menu").children("li").eq(0).hide();
             $("#menu").children("li").eq(1).hide();
             $("#menu").children("li").eq(2).show();
+            $("#menu").children("li").eq(3).hide();
+        } else if (ele.id == "orderManager") {
+            $("#menu").children("li").eq(0).hide();
+            $("#menu").children("li").eq(1).hide();
+            $("#menu").children("li").eq(2).show();
+            $("#menu").children("li").eq(3).show();
         }
     }
 </script>

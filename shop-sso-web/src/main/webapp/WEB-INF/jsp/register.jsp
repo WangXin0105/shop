@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache,must-revalidate">
-    <title>注册-个人用户</title>
+    <title>注册</title>
     <link rel="stylesheet" type="text/css" href="/css/headerfooter.css" />
 <link rel="stylesheet" type="text/css" href="/css/jquery.alerts.css" />
 <link rel="stylesheet" type="text/css" href="/css/headerfooterindex.css" />
@@ -45,7 +45,7 @@
                 <span class="regInput" id="userMamErr"></span>
             </li>
             <div node-type="layer" class="accountSearch" style="display:none;" id="person_mail"></div>
-            <li>
+            <li class="regMb30">
                 <label><font>*</font> 登录密码：</label>
             <span class="regM defaultBorder">
             	<input id="pwd" name="password" class="regInput" autocomplete="off" type="password" onfocus="showPwdtip('password','passwordErr',2);"  onkeyup="ckpwd(0,1);" onblur="ckpwd(0,0);"/>
@@ -53,9 +53,9 @@
             </span>
                 <span class="regInput" id="passwordErr"></span>
             </li>
-            <li class="safetyLayer regPl191" id="pwdStrong">
+            <%--<li class="safetyLayer regPl191" id="pwdStrong">
                 <font style="font-size:12px;">安全程度：</font><em class="default">弱</em><em class="default">中</em><em class="default">强</em>
-            </li>
+            </li>--%>
 
             <li class="regMb30">
                 <label><font>*</font> 确认密码：</label>
@@ -79,7 +79,7 @@
             <li class="regPl88">
 			<span  class="regM" style="margin-left:29px">
 				<input id="AgreeId" name="AgreeId" type="checkbox" checked="" onclick="ckAgree();">
-				<a href="https://passport.e3mall.cn/xy.html" target="_blank"  class="checkTitle">我已阅读并同意<font style="font-size:12px;">《宜立方商城用户注册协议》</font></a>
+				<a href="https://passport.e3mall.cn/xy.html" target="_blank"  class="checkTitle">我已阅读并同意<font style="font-size:12px;">《用户注册协议》</font></a>
 			</span>
                 <span  id="AgreeIdErr" ></span>
             </li>
@@ -104,11 +104,9 @@
 				<a href="http://www.e3mall.cn/www/330/2705.html" rel="nofollow" class="footerlink1">友情链接</a> | 
 				<a href="http://supplier.e3mall.cn/supplierApply" rel="nofollow" class="footerlink1">供应商申请</a>
 			</span>
-			<p> 
-				北京宜立方电子商务有限公司<br />
-				北京市公安局顺义分局备案11011302000890号|<a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow" class="footerlink1">京ICP备12011349号</a>|<a href="http://www.e3mall.cn/www/174/461.html" target="_blank" rel="nofollow" class="footerlink1">企业营业执照</a><br />
-				Copyright© 宜立方商城 e3mall.cn 版权所有<br /> 
-			</p>
+            <p>
+                北京电子商务有限公司<br> 北京市公安局顺义分局备案11011302000890号|<a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow" class="footerlink1">京ICP备12011349号</a>|<a href="http://www.e3mall.cn/www/174/461.html" target="_blank" rel="nofollow" class="footerlink1">企业营业执照</a><br> Copyright© 版权所有<br>
+            </p>
 		</div>
 		<!-- /footer -->
 <script type="text/javascript">

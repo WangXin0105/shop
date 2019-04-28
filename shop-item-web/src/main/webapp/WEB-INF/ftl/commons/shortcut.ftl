@@ -4,12 +4,12 @@
     <ul class="fr topTh">
       <li class="login" id="login">
       	<span id="loginbar" style="margin-right: 15px;">
-	      	<a href="https://passport.e3mall.cn/?returnUrl=http%3A//www.e3mall.cn/">请登录</a>
+	      	<a href="http://localhost:10009/page/login">请登录</a>
       	</span>
-      	<a href="https://passport.e3mall.cn/reg/?returnUrl=http%3A//www.e3mall.cn/">免费注册</a>
+      	<a href="http://localhost:10009/page/register">免费注册</a>
       </li>
       <!--<li id='qiyeLogin'><a href='http://www.sfme.me/login.jhtml' target='_blank' rel='nofollow'>员工福利</a></li>-->
-      <li class="myOrder"><a name="sfbest_hp_hp_head_OrderList" class="trackref" href="http://home.e3mall.cn/myorder/index/" rel="nofollow">我的订单</a></li>
+      <#--<li class="myOrder"><a name="sfbest_hp_hp_head_OrderList" class="trackref" href="http://home.e3mall.cn/myorder/index/" rel="nofollow">我的订单</a></li>
       <li class="menus">
         <a name="sfbest_hp_hp_head_home1" href="http://home.e3mall.cn/my/index/" rel="nofollow" class="trackref t">我的优选</a><b></b>
         <span class="outline"></span>
@@ -18,7 +18,7 @@
           <div><a name="sfbest_hp_hp_head_home2" class="trackref" href="http://home.e3mall.cn/myorder/index/" rel="nofollow">我的订单</a></div>
           <div><a name="sfbest_hp_hp_head_home4" class="trackref" href="http://home.e3mall.cn/my/points/" rel="nofollow">我的积分</a></div>
           <div><a name="sfbest_hp_hp_head_home3" class="trackref" href="http://home.e3mall.cn/favorites/index/" rel="nofollow">我的收藏</a></div>
-          <!-- <div><a href="http://home.e3mall.cn/my/balance/" rel="nofollow">账户余额</a></div> -->
+          <!-- <div><a href="http://home.e3mall.cn/my/balance/" rel="nofollow">账户余额</a></div> &ndash;&gt;
           <div><a href="http://home.e3mall.cn/giftcard/list/" rel="nofollow">我的优选卡</a></div>
           <div><a href="http://home.e3mall.cn/usercoupon/list/" rel="nofollow">我的优惠券</a></div>
         </div>
@@ -77,8 +77,8 @@
           <dl class="line"></dl>
           <dl>
             <dt class="dh2">特色频道</dt>
-            <dd><a name="sfbest_hp_hp_head_channel12" class="trackref" href="http://www.sfbest.hk" target="_blank">跨境直发</a><a name="sfbest_hp_hp_head_channel2" class="trackref" href="/qiye/" target="_blank">企业专区</a><a name="sfbest_hp_hp_head_channel3" class="trackref" href="/wine/" target="_blank">红酒廊</a><a name="sfbest_hp_hp_head_channel4" class="trackref" href="/taste/" target="_blank">寰宇美食</a><!-- <a name="sfbest_hp_hp_head_channel5" class="trackref" href="/healthy/" target="_blank">健康养生</a> -->
-            <!-- <a name="sfbest_hp_hp_head_channel6" class="trackref" href="/member/" target="_blank">会员俱乐部</a> --></dd>
+            <dd><a name="sfbest_hp_hp_head_channel12" class="trackref" href="http://www.sfbest.hk" target="_blank">跨境直发</a><a name="sfbest_hp_hp_head_channel2" class="trackref" href="/qiye/" target="_blank">企业专区</a><a name="sfbest_hp_hp_head_channel3" class="trackref" href="/wine/" target="_blank">红酒廊</a><a name="sfbest_hp_hp_head_channel4" class="trackref" href="/taste/" target="_blank">寰宇美食</a><!-- <a name="sfbest_hp_hp_head_channel5" class="trackref" href="/healthy/" target="_blank">健康养生</a> &ndash;&gt;
+            <!-- <a name="sfbest_hp_hp_head_channel6" class="trackref" href="/member/" target="_blank">会员俱乐部</a> &ndash;&gt;</dd>
           </dl>
           <dl class="line"></dl>
           <dl>
@@ -88,7 +88,7 @@
         </div>
       </li>
       <li class="d3 tShow"><a name="sfbest_hp_hp_head_weibo" class="trackref" title="关注宜立方商城微博" href="http://weibo.com/sfbest" rel="nofollow" target="_blank"><q></q></a></li>
-      <li class="d4 tShow"><q></q><!--微信-->
+      <li class="d4 tShow"><q></q><!--微信&ndash;&gt;
          <div class="dd">
          <div class="sf_wx_t">关注宜立方商城微信</div>
          <div class="sf_wx"></div>
@@ -97,7 +97,7 @@
           <div class="aBg"></div>
           <div class="aCt"></div>
         </div>
-       </li>
+       </li>-->
     </ul>
     <span class="clear"></span>
   </div>

@@ -39,4 +39,5 @@
 	<dubbo:reference interface="cn.edu.nun.content.service.ContentCatService" id="contentCatService" />
 	<dubbo:reference interface="cn.edu.nun.content.service.ContentService" id="contentService" />
 	<dubbo:reference interface="cn.edu.nun.search.service.SearchItemService" id="searchItemService"/>
+	<dubbo:reference interface="cn.edu.nun.order.service.OrderService" id="orderService" />
 </beans>

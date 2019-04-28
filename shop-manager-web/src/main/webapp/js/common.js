@@ -45,6 +45,9 @@ var E3 = {
 	formatPrice : function(val,row){
 		return (val/1000).toFixed(2);
 	},
+    formatOrderPrice : function(val,row){
+        return (val/100).toFixed(2);
+    },
 	// 格式化商品的状态
 	formatItemStatus : function formatStatus(val,row){
         if (val == 1){
@@ -55,7 +58,30 @@ var E3 = {
         	return '未知';
         }
     },
-    
+    // 格式化订单的状态：1、未付款，2、已付款，3、未发货，4、已发货，5、交易成功，6、交易关闭
+    formatOrderStatus : function formatOrderStatus(val,row){
+        if (val == 1){
+            return '未付款';
+        } else if(val == 2){
+            return '已付款';
+        } else if(val == 3){
+            return '未发货';
+        }else if(val == 4){
+            return '已发货';
+        }else if(val == 5){
+            return '交易成功';
+        }else if(val == 6){
+            return '交易关闭';
+        }
+    },
+    // 格式化订单支付类型
+    formatPayTypeStatus : function formatStatus(val,row){
+        if (val == 1){
+            return '在线支付';
+        } else if(val == 2){
+            return '货到付款';
+        }
+    },
     init : function(data){
     	// 初始化图片上传组件
     	this.initPicUpload(data);

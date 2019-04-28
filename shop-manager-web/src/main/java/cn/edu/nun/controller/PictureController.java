@@ -55,8 +55,8 @@ public class PictureController {
         //...其他参数参考类注释
         UploadManager uploadManager = new UploadManager(cfg);
         //...生成上传凭证，然后准备上传
-        String accessKey = "FAmPGcK4qgPOBHD1ft2UZ6gw-tXtZZcaaQSKzR-E";
-        String secretKey = "keMDlKjo-B-RnWL00K6-HvdI7dhjK5eLfU-HDWO2";
+        String accessKey = "CarY50qBL4RenM1DBfnqpla0UOvgQcuEjTdOXhe3";
+        String secretKey = "ML6K3vGGol6_5FNE9hqEUm1hTv2eUTRXlqH9J-tu";
         String bucket = "shop";
         //默认不指定key的情况下，以文件内容的hash值作为文件名
         String key = null;
@@ -68,7 +68,7 @@ public class PictureController {
             Response response = uploadManager.put(uploadBytes, key, upToken);
             //解析上传成功的结果
             DefaultPutRet putRet = new Gson().fromJson(response.bodyString(), DefaultPutRet.class);
-            String url = "http://ppdevkv3u.bkt.clouddn.com/" + putRet.key;
+            String url = "http://pqnbjw5yj.bkt.clouddn.com/" + putRet.key;
             Map result = new HashMap<>();
             result.put("error", 0);
             result.put("url", url);

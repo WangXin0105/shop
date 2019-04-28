@@ -1,14 +1,16 @@
 package cn.edu.nun.order.service.impl;
 
 import cn.edu.nun.common.jedis.JedisClient;
+import cn.edu.nun.common.pojo.DataModel;
 import cn.edu.nun.common.utils.ResultModel;
 import cn.edu.nun.mapper.TbOrderItemMapper;
 import cn.edu.nun.mapper.TbOrderMapper;
 import cn.edu.nun.mapper.TbOrderShippingMapper;
 import cn.edu.nun.order.pojo.OrderInfo;
 import cn.edu.nun.order.service.OrderService;
-import cn.edu.nun.pojo.TbOrderItem;
-import cn.edu.nun.pojo.TbOrderShipping;
+import cn.edu.nun.pojo.*;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -66,6 +68,54 @@ public class OrderServiceImpl implements OrderService {
         orderShipping.setUpdated(new Date());
         orderShippingMapper.insert(orderShipping);
         return ResultModel.ok(orderId);
+    }
+
+    @Override
+    public DataModel getOrderList(int page, int rows) {
+        DataModel dataModel = new DataModel();
+        PageHelper.startPage(page, rows);
+        TbOrderExample tbItemExample = new TbOrderExample();
+        List<TbOrder> tbOrders = orderMapper.selectByExample(tbItemExample);
+        PageInfo pageInfo = new PageInfo(tbOrders);
+        dataModel.setTotal(pageInfo.getTotal());
+        dataModel.setRows(tbOrders);
+        return dataModel;
+    }
+
+    @Override
+    public DataModel dectOrder(String ids, int page, int rows) {
+        DataModel dataModel = new DataModel();
+        PageHelper.startPage(page, rows);
+        TbOrderItemExample orderItemExample = new TbOrderItemExample();
+        TbOrderItemExample.Criteria criteria = orderItemExample.createCriteria();
+        criteria.andOrderIdEqualTo(ids);
+        List<TbOrderItem> list = orderItemMapper.selectByExample(orderItemExample);
+        PageInfo pageInfo = new PageInfo(list);
+        dataModel.setTotal(pageInfo.getTotal());
+        dataModel.setRows(list);
+        return dataModel;
+    }
+
+    @Override
+    public ResultModel sendOrder(String ids) {
+        TbOrder tbOrder = orderMapper.selectByPrimaryKey(ids);
+        tbOrder.setStatus(4);
+        orderMapper.updateByPrimaryKeySelective(tbOrder);
+        return ResultModel.ok();
+    }
+
+    @Override
+    public ResultModel endOrder(String ids) {
+        TbOrder tbOrder = orderMapper.selectByPrimaryKey(ids);
+        tbOrder.setStatus(5);
+        orderMapper.updateByPrimaryKeySelective(tbOrder);
+        return ResultModel.ok();
+    }
+
+    @Override
+    public ResultModel deleteOrder(String ids) {
+        orderMapper.deleteByPrimaryKey(ids);
+        return ResultModel.ok();
     }
 
 }
